@@ -212,7 +212,7 @@ def game_loop():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
- 
+###setting up movement keys and other####
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
                     x_change = -5
@@ -231,7 +231,8 @@ def game_loop():
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT or event.key == pygame.K_a or event.key == pygame.K_d:
                     x_change = 0
- 
+ ############################################
+
         x += x_change
         gameDisplay.fill(white)
  
@@ -253,7 +254,7 @@ def game_loop():
             dodged += 1
             thing_speed += 1
             thing_width += (dodged * 1.2)
-#checking if player has collided or not (still in work and has a bug =( )
+####checking if player has collided or not (still in work and has a bug =( )####
         if y < thing_starty+thing_height:
         	print('')
  
